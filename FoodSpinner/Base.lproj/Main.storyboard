@@ -102,16 +102,20 @@
                                 <state key="normal" title="Back"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZnA-df-lbN">
-                                <rect key="frame" x="42" y="194" width="302" height="212"/>
+                                <rect key="frame" x="36" y="150" width="302" height="245.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="02m-IK-f3k"/>
                                     <constraint firstAttribute="height" constant="212" id="14k-LW-iMg"/>
                                 </constraints>
                                 <string key="text">1. Brainstorm possible options with family, friends, significant other
+
 2. Add options to app
+
 3. Continue to “Spinner” and press “Spin”
+
 4. Once the spinner stops, proceed to eat at the option listed
+
 5. Enjoy!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
