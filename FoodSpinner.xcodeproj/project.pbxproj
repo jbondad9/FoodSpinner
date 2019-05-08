@@ -14,6 +14,8 @@
 		9759492F2281D22E00622BC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9759492D2281D22E00622BC3 /* LaunchScreen.storyboard */; };
 		9759493A2281D22E00622BC3 /* FoodSpinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975949392281D22E00622BC3 /* FoodSpinnerTests.swift */; };
 		975949452281D22E00622BC3 /* FoodSpinnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975949442281D22E00622BC3 /* FoodSpinnerUITests.swift */; };
+		975949532281D6C200622BC3 /* FoodOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975949522281D6C200622BC3 /* FoodOptions.swift */; };
+		975949552281D6D000622BC3 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975949542281D6D000622BC3 /* Spinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		975949402281D22E00622BC3 /* FoodSpinnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodSpinnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		975949442281D22E00622BC3 /* FoodSpinnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSpinnerUITests.swift; sourceTree = "<group>"; };
 		975949462281D22E00622BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		975949522281D6C200622BC3 /* FoodOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOptions.swift; sourceTree = "<group>"; };
+		975949542281D6D000622BC3 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				975949242281D22E00622BC3 /* AppDelegate.swift */,
 				975949262281D22E00622BC3 /* Start.swift */,
 				975949282281D22E00622BC3 /* Main.storyboard */,
+				975949522281D6C200622BC3 /* FoodOptions.swift */,
+				975949542281D6D000622BC3 /* Spinner.swift */,
 				9759492B2281D22E00622BC3 /* Assets.xcassets */,
 				9759492D2281D22E00622BC3 /* LaunchScreen.storyboard */,
 				975949302281D22E00622BC3 /* Info.plist */,
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				975949272281D22E00622BC3 /* Start.swift in Sources */,
+				975949532281D6C200622BC3 /* FoodOptions.swift in Sources */,
 				975949252281D22E00622BC3 /* AppDelegate.swift in Sources */,
+				975949552281D6D000622BC3 /* Spinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
