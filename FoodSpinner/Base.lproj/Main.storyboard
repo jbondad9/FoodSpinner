@@ -90,7 +90,11 @@
                                 <items>
                                     <navigationItem id="3dE-wq-bJN">
                                         <barButtonItem key="leftBarButtonItem" title="Add Options" id="Vya-qY-UmE"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Spin" id="dmV-la-wCl"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Spin" id="dmV-la-wCl">
+                                            <connections>
+                                                <segue destination="ngF-xd-fQt" kind="presentation" id="5xI-AH-har"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -180,7 +184,18 @@
                     <view key="view" contentMode="scaleToFill" id="bOR-Qa-tWJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" sceneName="GameScene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="3mJ-Bx-qaG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cV1-dC-7Nf" firstAttribute="trailing" secondItem="3mJ-Bx-qaG" secondAttribute="trailing" id="Ant-mf-DRq"/>
+                            <constraint firstItem="3mJ-Bx-qaG" firstAttribute="top" secondItem="cV1-dC-7Nf" secondAttribute="top" id="HsG-rL-CAb"/>
+                            <constraint firstItem="3mJ-Bx-qaG" firstAttribute="leading" secondItem="cV1-dC-7Nf" secondAttribute="leading" id="Ua9-5F-3uU"/>
+                            <constraint firstItem="cV1-dC-7Nf" firstAttribute="bottom" secondItem="3mJ-Bx-qaG" secondAttribute="bottom" id="hGZ-5a-xPf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cV1-dC-7Nf"/>
                     </view>
                 </viewController>

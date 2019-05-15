@@ -36,6 +36,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		312EF7E9228C5ED900A4EC9A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		312EF7EA228C5ED900A4EC9A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		312EF7EC228C5ED900A4EC9A /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
+		312EF7EE228C5ED900A4EC9A /* SparkleBlast.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkleBlast.sks; sourceTree = "<group>"; };
+		312EF7EF228C5ED900A4EC9A /* sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sparkle.png; sourceTree = "<group>"; };
+		312EF7F1228C5ED900A4EC9A /* victory.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = victory.aac; sourceTree = "<group>"; };
+		312EF7F2228C5ED900A4EC9A /* woosh.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = woosh.aac; sourceTree = "<group>"; };
+		312EF7F3228C5ED900A4EC9A /* bubble_pop.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = bubble_pop.aac; sourceTree = "<group>"; };
+		312EF7F4228C5ED900A4EC9A /* error.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = error.aac; sourceTree = "<group>"; };
+		312EF7F6228C5ED900A4EC9A /* gomarice_okuba_cloud.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gomarice_okuba_cloud.ttf; sourceTree = "<group>"; };
+		312EF7F7228C5ED900A4EC9A /* Context Rounded Black SSi Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Context Rounded Black SSi Black.ttf"; sourceTree = "<group>"; };
+		312EF7FA228C5ED900A4EC9A /* SpinWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinWheel.swift; sourceTree = "<group>"; };
+		312EF7FC228C5ED900A4EC9A /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
+		312EF7FD228C5ED900A4EC9A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		312EF7FE228C5ED900A4EC9A /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		312EF800228C5ED900A4EC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		312EF802228C5ED900A4EC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		312EF804228C5ED900A4EC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		312EF805228C5ED900A4EC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		312EF806228C5ED900A4EC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		312EF807228C5ED900A4EC9A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		975949212281D22E00622BC3 /* FoodSpinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodSpinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		975949242281D22E00622BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		975949262281D22E00622BC3 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
@@ -78,9 +99,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		312EF7E7228C5ED900A4EC9A /* SpinWheel */ = {
+			isa = PBXGroup;
+			children = (
+				312EF7E8228C5ED900A4EC9A /* Scenes */,
+				312EF7EA228C5ED900A4EC9A /* GameViewController.swift */,
+				312EF7EB228C5ED900A4EC9A /* Resources */,
+				312EF7F8228C5ED900A4EC9A /* Objects */,
+				312EF7FB228C5ED900A4EC9A /* Utils */,
+				312EF7FF228C5ED900A4EC9A /* Supporting Files */,
+				312EF807228C5ED900A4EC9A /* GameScene.swift */,
+			);
+			path = SpinWheel;
+			sourceTree = "<group>";
+		};
+		312EF7E8228C5ED900A4EC9A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				312EF7E9228C5ED900A4EC9A /* GameScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		312EF7EB228C5ED900A4EC9A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				312EF7EC228C5ED900A4EC9A /* Game.xcassets */,
+				312EF7ED228C5ED900A4EC9A /* Particles */,
+				312EF7F0228C5ED900A4EC9A /* Sounds */,
+				312EF7F5228C5ED900A4EC9A /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		312EF7ED228C5ED900A4EC9A /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				312EF7EE228C5ED900A4EC9A /* SparkleBlast.sks */,
+				312EF7EF228C5ED900A4EC9A /* sparkle.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		312EF7F0228C5ED900A4EC9A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				312EF7F1228C5ED900A4EC9A /* victory.aac */,
+				312EF7F2228C5ED900A4EC9A /* woosh.aac */,
+				312EF7F3228C5ED900A4EC9A /* bubble_pop.aac */,
+				312EF7F4228C5ED900A4EC9A /* error.aac */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		312EF7F5228C5ED900A4EC9A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				312EF7F6228C5ED900A4EC9A /* gomarice_okuba_cloud.ttf */,
+				312EF7F7228C5ED900A4EC9A /* Context Rounded Black SSi Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		312EF7F8228C5ED900A4EC9A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				312EF7F9228C5ED900A4EC9A /* Scenes */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		312EF7F9228C5ED900A4EC9A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				312EF7FA228C5ED900A4EC9A /* SpinWheel.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		312EF7FB228C5ED900A4EC9A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				312EF7FC228C5ED900A4EC9A /* PushButton.swift */,
+				312EF7FD228C5ED900A4EC9A /* Settings.swift */,
+				312EF7FE228C5ED900A4EC9A /* CGFloat+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		312EF7FF228C5ED900A4EC9A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				312EF800228C5ED900A4EC9A /* Assets.xcassets */,
+				312EF801228C5ED900A4EC9A /* LaunchScreen.storyboard */,
+				312EF803228C5ED900A4EC9A /* Main.storyboard */,
+				312EF805228C5ED900A4EC9A /* AppDelegate.swift */,
+				312EF806228C5ED900A4EC9A /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		975949182281D22E00622BC3 = {
 			isa = PBXGroup;
 			children = (
+				312EF7E7228C5ED900A4EC9A /* SpinWheel */,
 				975949232281D22E00622BC3 /* FoodSpinner */,
 				975949382281D22E00622BC3 /* FoodSpinnerTests */,
 				975949432281D22E00622BC3 /* FoodSpinnerUITests */,
@@ -301,6 +423,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		312EF801228C5ED900A4EC9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				312EF802228C5ED900A4EC9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		312EF803228C5ED900A4EC9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				312EF804228C5ED900A4EC9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		975949282281D22E00622BC3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
