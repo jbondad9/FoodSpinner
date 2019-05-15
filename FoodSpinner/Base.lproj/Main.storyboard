@@ -19,12 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-NH-P8v" userLabel="btn_start">
-                                <rect key="frame" x="162.5" y="222" width="50" height="41"/>
+                                <rect key="frame" x="162.5" y="178" width="50" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="vdM-tx-RyB" kind="presentation" id="2TU-iT-sEY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySu-zB-vmc" userLabel="btn_start">
-                                <rect key="frame" x="126.5" y="273" width="122" height="41"/>
+                                <rect key="frame" x="126.5" y="229" width="122" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Instructions"/>
                                 <connections>
@@ -32,13 +35,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOOD SPINNER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKC-7Z-F0I" userLabel="lbl_foodSpinner">
-                                <rect key="frame" x="76" y="123" width="223" height="39"/>
+                                <rect key="frame" x="76" y="79" width="223" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTx-lV-8lB" userLabel="lbl_welcomeTo">
-                                <rect key="frame" x="128" y="94" width="119" height="29"/>
+                                <rect key="frame" x="128" y="50" width="119" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="119" id="Bzo-0s-RGV"/>
                                     <constraint firstAttribute="height" constant="29" id="rni-JR-WXv"/>
@@ -70,17 +73,47 @@
         <!--FoodOptions-->
         <scene sceneID="pqY-e5-0z2">
             <objects>
-                <viewController id="vdM-tx-RyB" userLabel="FoodOptions" sceneMemberID="viewController">
+                <viewController id="vdM-tx-RyB" userLabel="FoodOptions" customClass="FoodOptions" customModule="FoodSpinner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C50-wc-jgs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pWy-SX-k7a">
+                                <rect key="frame" x="0.0" y="104" width="375" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORZ-0o-5tA">
+                                <rect key="frame" x="0.0" y="30" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ORZ-0o-5tA" secondAttribute="height" multiplier="375:44" id="AVt-mS-HIg"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="3dE-wq-bJN">
+                                        <barButtonItem key="leftBarButtonItem" title="Add Options" id="Vya-qY-UmE"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Spin" id="dmV-la-wCl"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ORZ-0o-5tA" firstAttribute="top" secondItem="C50-wc-jgs" secondAttribute="top" constant="30" id="2W1-Ci-sly"/>
+                            <constraint firstItem="ORZ-0o-5tA" firstAttribute="trailing" secondItem="9tR-sK-aiP" secondAttribute="trailing" id="2ks-QV-J42"/>
+                            <constraint firstItem="pWy-SX-k7a" firstAttribute="centerX" secondItem="9tR-sK-aiP" secondAttribute="centerX" id="JQh-kc-Iqu"/>
+                            <constraint firstItem="ORZ-0o-5tA" firstAttribute="leading" secondItem="9tR-sK-aiP" secondAttribute="leading" id="gQp-3H-xQU"/>
+                            <constraint firstItem="pWy-SX-k7a" firstAttribute="top" secondItem="ORZ-0o-5tA" secondAttribute="bottom" constant="30" id="hAf-DO-Myb"/>
+                            <constraint firstItem="pWy-SX-k7a" firstAttribute="trailing" secondItem="9tR-sK-aiP" secondAttribute="trailing" id="iq7-4B-vKl"/>
+                            <constraint firstItem="9tR-sK-aiP" firstAttribute="bottom" secondItem="pWy-SX-k7a" secondAttribute="bottom" constant="7" id="pg9-RD-bxc"/>
+                            <constraint firstItem="ORZ-0o-5tA" firstAttribute="centerX" secondItem="9tR-sK-aiP" secondAttribute="centerX" id="xW5-4R-wWS"/>
+                            <constraint firstItem="pWy-SX-k7a" firstAttribute="leading" secondItem="9tR-sK-aiP" secondAttribute="leading" id="xj9-wI-mHQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9tR-sK-aiP"/>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7z-ki-Nvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="134"/>
+            <point key="canvasLocation" x="1948" y="133.5832083958021"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="ndp-lf-CPd">
@@ -100,6 +133,9 @@
                                 <rect key="frame" x="161" y="565" width="52" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="YjT-HR-WBk"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZnA-df-lbN">
                                 <rect key="frame" x="36" y="150" width="302" height="245.5"/>
@@ -171,4 +207,7 @@
             <point key="canvasLocation" x="361" y="134"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YjT-HR-WBk"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,6 @@
 
 import UIKit
 
-class FoodOptions: NSObject {
+class FoodOptions: UIViewController {
 
 }
