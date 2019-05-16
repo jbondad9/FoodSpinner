@@ -79,8 +79,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pWy-SX-k7a">
-                                <rect key="frame" x="0.0" y="104" width="375" height="556"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="586"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="doB-R2-cPN">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="doB-R2-cPN" id="HIF-KG-Uku">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQk-o6-whF">
+                                                    <rect key="frame" x="15" y="11" width="60" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vdM-tx-RyB" id="Akw-7g-utP"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORZ-0o-5tA">
                                 <rect key="frame" x="0.0" y="30" width="375" height="44"/>
@@ -89,12 +111,12 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="3dE-wq-bJN">
-                                        <barButtonItem key="leftBarButtonItem" title="Add Options" id="Vya-qY-UmE"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Spin" id="dmV-la-wCl">
+                                        <barButtonItem key="leftBarButtonItem" title="Add Options" id="Vya-qY-UmE">
                                             <connections>
-                                                <segue destination="ngF-xd-fQt" kind="presentation" id="5xI-AH-har"/>
+                                                <action selector="onAddTapped:" destination="vdM-tx-RyB" id="wjr-cH-0XJ"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Spin" id="dmV-la-wCl"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -105,7 +127,7 @@
                             <constraint firstItem="ORZ-0o-5tA" firstAttribute="trailing" secondItem="9tR-sK-aiP" secondAttribute="trailing" id="2ks-QV-J42"/>
                             <constraint firstItem="pWy-SX-k7a" firstAttribute="centerX" secondItem="9tR-sK-aiP" secondAttribute="centerX" id="JQh-kc-Iqu"/>
                             <constraint firstItem="ORZ-0o-5tA" firstAttribute="leading" secondItem="9tR-sK-aiP" secondAttribute="leading" id="gQp-3H-xQU"/>
-                            <constraint firstItem="pWy-SX-k7a" firstAttribute="top" secondItem="ORZ-0o-5tA" secondAttribute="bottom" constant="30" id="hAf-DO-Myb"/>
+                            <constraint firstItem="pWy-SX-k7a" firstAttribute="top" secondItem="ORZ-0o-5tA" secondAttribute="bottom" id="hAf-DO-Myb"/>
                             <constraint firstItem="pWy-SX-k7a" firstAttribute="trailing" secondItem="9tR-sK-aiP" secondAttribute="trailing" id="iq7-4B-vKl"/>
                             <constraint firstItem="9tR-sK-aiP" firstAttribute="bottom" secondItem="pWy-SX-k7a" secondAttribute="bottom" constant="7" id="pg9-RD-bxc"/>
                             <constraint firstItem="ORZ-0o-5tA" firstAttribute="centerX" secondItem="9tR-sK-aiP" secondAttribute="centerX" id="xW5-4R-wWS"/>
@@ -114,6 +136,9 @@
                         <viewLayoutGuide key="safeArea" id="9tR-sK-aiP"/>
                     </view>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="tableView" destination="pWy-SX-k7a" id="fYg-hL-XQg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7z-ki-Nvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
