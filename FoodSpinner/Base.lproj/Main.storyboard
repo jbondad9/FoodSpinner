@@ -118,7 +118,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Spin" id="dmV-la-wCl" userLabel="btn_spin">
                                             <connections>
-                                                <segue destination="ngF-xd-fQt" kind="show" id="EN4-Dd-UvP"/>
+                                                <segue destination="T1q-Tw-15Y" kind="presentation" id="09J-e1-CRo"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -147,6 +147,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7z-ki-Nvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1948" y="133.5832083958021"/>
+        </scene>
+        <!--Spinner-->
+        <scene sceneID="hBc-yq-59T">
+            <objects>
+                <viewController id="T1q-Tw-15Y" customClass="Spinner" customModule="FoodSpinner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hh5-oz-0ev">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ScQ-MH-nHJ" userLabel="navBar_navigationBar01">
+                                <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ScQ-MH-nHJ" secondAttribute="height" multiplier="375:44" id="SpH-vg-aYG"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="hq2-jd-6XR" userLabel="navItm_navagationItem01">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="CUh-do-U3q" userLabel="btn_back">
+                                            <connections>
+                                                <action selector="onAddTapped:" destination="vdM-tx-RyB" id="gLE-Zu-5q8"/>
+                                                <segue destination="vdM-tx-RyB" kind="presentation" id="V2s-A2-2ir"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHOICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spb-8g-aC1">
+                                <rect key="frame" x="109" y="293" width="182" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ScQ-MH-nHJ" firstAttribute="centerX" secondItem="F70-xq-wd9" secondAttribute="centerX" id="A36-xV-aTR"/>
+                            <constraint firstItem="ScQ-MH-nHJ" firstAttribute="top" secondItem="F70-xq-wd9" secondAttribute="top" constant="30" id="DVg-7n-aTG"/>
+                            <constraint firstItem="ScQ-MH-nHJ" firstAttribute="trailing" secondItem="F70-xq-wd9" secondAttribute="trailing" id="L0T-OG-IXj"/>
+                            <constraint firstItem="spb-8g-aC1" firstAttribute="centerY" secondItem="F70-xq-wd9" secondAttribute="centerY" id="Syz-HH-KbN"/>
+                            <constraint firstItem="spb-8g-aC1" firstAttribute="centerX" secondItem="F70-xq-wd9" secondAttribute="centerX" id="c4Q-K8-xAV"/>
+                            <constraint firstItem="ScQ-MH-nHJ" firstAttribute="leading" secondItem="F70-xq-wd9" secondAttribute="leading" id="j6F-Yk-GCW"/>
+                            <constraint firstItem="ScQ-MH-nHJ" firstAttribute="width" secondItem="ScQ-MH-nHJ" secondAttribute="height" multiplier="375:44" id="q1R-2T-OjA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F70-xq-wd9"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbl_choice" destination="spb-8g-aC1" id="3Gh-9j-Ciw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKL-hg-Hdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2781.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="ndp-lf-CPd">
@@ -206,32 +257,6 @@
             </objects>
             <point key="canvasLocation" x="1152.8" y="913.49325337331345"/>
         </scene>
-        <!--Spinner-->
-        <scene sceneID="X0v-Ka-P1l">
-            <objects>
-                <viewController id="ngF-xd-fQt" userLabel="Spinner" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bOR-Qa-tWJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <skView contentMode="scaleToFill" sceneName="GameScene.sks" translatesAutoresizingMaskIntoConstraints="NO" id="3mJ-Bx-qaG">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </skView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="cV1-dC-7Nf" firstAttribute="trailing" secondItem="3mJ-Bx-qaG" secondAttribute="trailing" id="Ant-mf-DRq"/>
-                            <constraint firstItem="3mJ-Bx-qaG" firstAttribute="top" secondItem="cV1-dC-7Nf" secondAttribute="top" id="HsG-rL-CAb"/>
-                            <constraint firstItem="3mJ-Bx-qaG" firstAttribute="leading" secondItem="cV1-dC-7Nf" secondAttribute="leading" id="Ua9-5F-3uU"/>
-                            <constraint firstItem="cV1-dC-7Nf" firstAttribute="bottom" secondItem="3mJ-Bx-qaG" secondAttribute="bottom" id="hGZ-5a-xPf"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="cV1-dC-7Nf"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Eo-TN-OPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2761" y="134"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bXf-SV-oRJ">
             <objects>
@@ -252,7 +277,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="afK-m0-amo"/>
+        <segue reference="V2s-A2-2ir"/>
         <segue reference="YjT-HR-WBk"/>
     </inferredMetricsTieBreakers>
 </document>

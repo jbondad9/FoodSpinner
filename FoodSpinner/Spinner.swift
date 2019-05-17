@@ -8,6 +8,13 @@
 
 import UIKit
 
-class Spinner: NSObject {
-
+class Spinner: UIViewController {
+    var userDefaults = UserDefaults.standard
+    @IBOutlet weak var lbl_choice: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var savedOptions = userDefaults.array(forKey: "savedOptions")
+    }
+    
 }
