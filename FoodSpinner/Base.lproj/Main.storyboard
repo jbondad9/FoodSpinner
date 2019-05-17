@@ -116,7 +116,11 @@
                                                 <action selector="onAddTapped:" destination="vdM-tx-RyB" id="wjr-cH-0XJ"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Spin" id="dmV-la-wCl" userLabel="btn_spin"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Spin" id="dmV-la-wCl" userLabel="btn_spin">
+                                            <connections>
+                                                <segue destination="ngF-xd-fQt" kind="show" id="EN4-Dd-UvP"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -248,6 +252,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="afK-m0-amo"/>
         <segue reference="YjT-HR-WBk"/>
     </inferredMetricsTieBreakers>
 </document>

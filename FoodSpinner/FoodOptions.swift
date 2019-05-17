@@ -20,8 +20,10 @@ class FoodOptions: UIViewController {
         
         var savedOptions = userDefaults.array(forKey: "savedOptions")
         
-        for option in savedOptions! { //adds saved options from last time
-            add((option as! String))
+        if !(options.isEmpty) { //adds saved options from last time
+            for option in savedOptions! {
+                add((option as! String))
+            }
         }
         
     }
@@ -52,6 +54,7 @@ class FoodOptions: UIViewController {
     
 }
 
+//EXTENSION
 extension FoodOptions: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
